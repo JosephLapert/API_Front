@@ -1,34 +1,31 @@
-// import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import axios from 'axios';
 
-const InsertComment = () => {
-    // const [comment, setComments] = React.useState([]);
 
-    axios.post('http://localhost:8000/api/comment/', {
-        commentaire: 'Admis'
+const NewComment = () => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = {};
+        const inputs = formRef.current.querySelectorAll('input');
+        Array.from(inputs).filter( input => input.checked ).forEach(input => {
+            form[input.name] = input.value  
+        })
+        await axios.post('http://localhost:8000/api/comment/', form)
     }
-    )
-    .then((response) => {
-        console.log(response);
-    }
-    )
-    
-
-
-    // const input = useRef();
-
-    // const insert = (e) => {
-    //     e.preventDefault()
-    //     console.log(input.current.value);
-    //     input.current.type = "text"
-    // }
-
+    const formRef = useRef();
     return (
-        <>
-         {/* <input type="text" ref={input} />
-         <button onClick={insert}> Submit </button>    */}
-        </>
+        <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
+
+            <input type="radio" id="admis" name="commentaire" value="admis"/>
+            <label for="admis">Admis</label>
+
+            <input type="radio" id="refuser" name="commentaire" value="refusé"/>
+            <label for="refuser">Refuser</label> <br />
+
+            <button>Validez</button>
+        </form>
     );
 };
 
-export default InsertComment;
+export default NewComment;

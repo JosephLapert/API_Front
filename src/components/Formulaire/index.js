@@ -1,52 +1,47 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import axios from 'axios';
 
-const NameForm = (props) => {
+const NameForm = () => {
 
-    const [form, setForm] = useState({
-        nom: "",
-        prenom:"",
-        dateDeNaissance:"",
-        sexe:"",
-        adresse:"",
-        codePostal:"",
-        ville:"",
-        pays:"",
-        mobile:"",
-        email:"",
-        password:""
-    });
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = {};
+        const inputs = formRef.current.querySelectorAll('input');
+        Array.from(inputs).forEach(input => {
+            form[input.name] = input.value
+        })
+        await axios.post('http://localhost:8000/api/users/', form)
+        
+    }
     const formRef = useRef();
-
     return (
-        <>
-        <label>
-            Nom: 
-            <input type="text" /> <br />
-            Prenom: 
-            <input type="text" /> <br />
-            Date de naissance:
-            <input type="text" /> <br />
-            Sexe:
-            <input type="text" /> <br />
-            Adresse:
-            <input type="text" /> <br />
-            Code postal:
-            <input type="text" /> <br />
-            Ville:
-            <input type="text" /> <br />
-            Pays:
-            <input type="text" /> <br />
-            Mobile:
-            <input type="text" /> <br />
-            Email:
-            <input type="text" /> <br />
-            Password:
-            <input type="password" /> <br />
-        </label>
-        <input type="submit" value="Submit" />            
-        </>
+        <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
+            <label>
+                Nom: 
+                <input type="text" name="nom"/> <br />
+                Prenom: 
+                <input type="text" name="prenom"/> <br />
+                Date de naissance:
+                <input type="date" name="ddn"/> <br />
+                Sexe:
+                <input type="text" name="sexe"/> <br />
+                Adresse:
+                <input type="text" name="adresse"/> <br />
+                Code postal:
+                <input type="text" name="cp"/> <br />
+                Ville:
+                <input type="text" name="ville"/> <br />
+                Pays:
+                <input type="text" name="pays"/> <br />
+                Mobile:
+                <input type="text" name="mobile"/> <br />
+                Email:
+                <input type="text" name="email"/> <br />
+                Password:
+                <input type="password" name="psswd"/> <br />
+            </label>
+                <input type="submit" value="Submit" />            
+        </form>
     );
 };
-
 export default NameForm;
