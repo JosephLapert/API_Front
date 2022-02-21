@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NotFound from "./pages/NotFound";
+import ListUsers from "./pages/ListTodo";
+import Home from "./pages/Home";
+import Formulaire from "./components/Formulaire";
+import InsertComment from "./components/AjoutComment";
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/todos">Users</Link>
+        <Link to="/form">Formulaire</Link>
+        <Link to="/comment">Commentaire</Link>
+      </nav>
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          <Route path="todos" element={<ListUsers />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/form" element={<Formulaire />} />
+          <Route path="/comment" element={<InsertComment />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
