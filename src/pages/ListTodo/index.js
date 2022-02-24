@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const ListUsers = () => {
 
-    const [todos, setTodos] = React.useState( [] );
+    const [todos, setTodos] = React.useState([]);
 
     React.useEffect(() => {
         axios.get('http://localhost:8000/api/test')

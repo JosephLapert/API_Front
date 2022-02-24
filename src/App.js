@@ -4,6 +4,7 @@ import ListUsers from "./pages/ListTodo";
 import Home from "./pages/Home";
 import Formulaire from "./components/Formulaire";
 import InsertComment from "./components/AjoutComment";
+import SeanceCoach from "./components/SeanceCoach";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Link to="/todos">Users</Link>
         <Link to="/form">Formulaire</Link>
         <Link to="/comment">Commentaire</Link>
+        <Link to="/seance">Date Séance</Link>
       </nav>
         <Routes>
           <Route path="*" element={<NotFound />} />
@@ -23,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Formulaire />} />
           <Route path="/comment" element={<InsertComment />} />
+          <Route path="/seance" element={<SeanceCoach />} />
         </Routes>
       </Router>
     </div>
