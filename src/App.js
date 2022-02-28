@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Formulaire from "./components/Formulaire";
 import InsertComment from "./components/AjoutComment";
 import SeanceCoach from "./components/SeanceCoach";
+import UpdateUtilisateur from "./components/UpdateUtilisateur";
 
 function App() {
 
@@ -14,10 +15,10 @@ function App() {
       <Router>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/todos">Users</Link>
+        {/* <Link to="/todos">Users</Link> */}
         <Link to="/form">Formulaire</Link>
-        <Link to="/comment">Commentaire</Link>
         <Link to="/seance">Date Séance</Link>
+        <Link to="/update">UpdateUtilisateur</Link>
       </nav>
         <Routes>
           <Route path="*" element={<NotFound />} />
@@ -26,6 +27,7 @@ function App() {
           <Route path="/form" element={<Formulaire />} />
           <Route path="/comment" element={<InsertComment />} />
           <Route path="/seance" element={<SeanceCoach />} />
+          <Route path="/update" element={<UpdateUtilisateur />} />
         </Routes>
       </Router>
     </div>

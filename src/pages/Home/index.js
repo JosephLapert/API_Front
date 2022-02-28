@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div>
             <h3>
-                Welcome sur la page d'accueil du front API
+                Bienvenue sur la page d'accueil de Maison des Ligues.
             </h3>
         </div>
     );

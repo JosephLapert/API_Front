@@ -4,7 +4,7 @@ import axios from 'axios';
 const NameForm = () => {
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         const form = {};
         const inputs = formRef.current.querySelectorAll('input');
         Array.from(inputs).forEach(input => {

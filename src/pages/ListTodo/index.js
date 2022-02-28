@@ -20,9 +20,9 @@ const ListUsers = () => {
 
     // console.log(todos);
 
-    return todos.map(todo => 
-        <div key={todo.id}>
-            { todo.nom } { todo.prenom } { todo.ddn }
+    return todos.map((todo, index) => 
+        <div key={`ListUsers${index}`}>
+            { todo.nom } { todo.prenom } { todo.ddn.substr(0,10) }
         </div>
     )
 };
