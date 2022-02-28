@@ -8,17 +8,15 @@ import SeanceCoach from "./components/SeanceCoach";
 import UpdateUtilisateur from "./components/UpdateUtilisateur";
 
 function App() {
-
-
   return (
     <div className="App">
       <Router>
       <nav>
         <Link to="/">Home</Link>
         {/* <Link to="/todos">Users</Link> */}
-        <Link to="/form">Formulaire</Link>
-        <Link to="/seance">Date Séance</Link>
-        <Link to="/update">UpdateUtilisateur</Link>
+        <Link to="/form">Inscription</Link>
+        <Link to="/seance">Date de séance</Link>
+        <Link to="/update">Modification de profil</Link>
       </nav>
         <Routes>
           <Route path="*" element={<NotFound />} />

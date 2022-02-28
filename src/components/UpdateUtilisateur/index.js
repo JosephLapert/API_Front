@@ -11,7 +11,6 @@ const UpdateUtilisateur = () => {
             form[input.name] = input.value
         })
         await axios.post('http://localhost:8000/api/users/', form)
-
     }
 
     const HandleId = async (id) => {
@@ -21,15 +20,18 @@ const UpdateUtilisateur = () => {
         setUser(result.data.success[0][0]);
          
     }
-
-    useEffect(() => {
-        HandleId(1)
-    }, [])
-
     const [user, setUser] = useState({});
 
+    useEffect(() => {
+        HandleId(2)
+    }, [])
 
     const formeRef = useRef();
+
+    const profileDelete = async (id) => {
+        const result = await axios.delete(`http://localhost:8000/api/users/${ id }`)
+        console.log(result);
+    }
     return (
         <form ref={formeRef} onSubmit={(e) => handleSubmite(e)}>
             <label>
@@ -56,7 +58,8 @@ const UpdateUtilisateur = () => {
                 Password:
                 <input type="password" name="psswd" value={user.psswd}/> <br />
             </label>
-                <input type="submit" value="Submit" />    
+                <input type="submit" value="Submit" />
+                <button onClick={(e) => { profileDelete(e)}}>Supprimer</button>    
         </form>
     );
 };
