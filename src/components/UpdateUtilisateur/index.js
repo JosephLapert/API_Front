@@ -21,7 +21,7 @@ const UpdateUtilisateur = () => {
     }
     
     useEffect(() => {
-        HandleId(7)
+        HandleId(1)
     }, [])
     
     const [user, setUser] = useState({});
