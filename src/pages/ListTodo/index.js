@@ -20,9 +20,16 @@ const ListUsers = () => {
 
     // console.log(todos);
 
-    return todos.map(todo => 
-        <div key={todo.id}>
-            { todo.nom } { todo.prenom } { todo.ddn }
+    return (
+        <div id='div_list_todos'>
+            <h3 id='titre_list_todos_css'>Liste des inscrits</h3>
+            {
+                todos.map(todo => (
+                    <div id='list_todos_css' key={todo.id}>{ todo.nom } { todo.prenom } { todo.ddn }</div> 
+                ))
+            
+            }
+
         </div>
     )
 };
