@@ -1,6 +1,5 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const SeanceCoach = () => {
@@ -8,20 +7,15 @@ const SeanceCoach = () => {
     const [seances, setSeances] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/seances/2')
+        axios.get('http://localhost:8000/api/seances/1')
             .then((response) => {
             setSeances(response.data.success[0])
         })
     }, []);
 
-
-
     if (seances.length === 0) {
         return null;
     }
-
-    // const []
-
 
     return (
 
