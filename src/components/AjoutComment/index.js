@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import axios from 'axios';
 
-
 const NewComment = () => {
 
     const handleSubmit = async (e) => {
@@ -15,8 +14,7 @@ const NewComment = () => {
     }
     const formRef = useRef();
     return (
-        <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
-
+        <form id='comment_css' ref={formRef} onSubmit={(e) => handleSubmit(e)}>
             <input type="radio" id="admis" name="commentaire" value="admis"/>
             <label for="admis">Admis</label>
 
