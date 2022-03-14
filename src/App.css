@@ -182,3 +182,39 @@ nav > #link_css{
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
+
+#titre_date_seance_css{
+    align-self: center;
+    position: relative;
+    top: 175px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#date_seance_css{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 826px;
+    height: 50px;
+    left: 0px;
+    top: 269px;
+
+    font-family: Mansalva;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
