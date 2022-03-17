@@ -2,18 +2,18 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 
-const SeanceCoach = () => {
+const SeanceCoach = (id) => {
 
     const [seances, setSeances] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/seances/1')
+        axios.get(`/seances/${ id }`)
             .then((response) => {
             setSeances(response.data.success[0])
         })
     }, []);
 
-    if (seances.length === 0) {
+    if (seances.length === 0) { 
         return null;
     }
 

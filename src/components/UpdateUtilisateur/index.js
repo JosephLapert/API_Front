@@ -1,7 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
+import { useAuth } from '../../contexts/AuthContext';
+
+
 
 const UpdateUtilisateur = () => {
+
+
+
+    const { user } = useAuth();
 
     const handleSubmite = async (e) => {
         e.preventDefault();
@@ -10,27 +17,22 @@ const UpdateUtilisateur = () => {
         Array.from(inputs).foreach(input => {
             form[input.name] = input.value
         })
-        await axios.post('http://localhost:8000/api/users/', form)
-    }
-    
-    const HandleId = async (id) => {
-        
-        const result = await axios.get(`http://localhost:8000/api/users/${ id }`)
-        setUser(result.data.success[0][0]);
-        
+        await axios.post('/users/', form)
     }
     
     useEffect(() => {
-        HandleId(7)
     }, [])
-    
-    const [user, setUser] = useState({});
-    
+        
     const formeRef = useRef();
 
     const profileDelete = async (id) => {
-        await axios.delete(`http://localhost:8000/api/users/${ id }`)
+        await axios.delete(`/users/${ id }`)
         
+    }
+    if (!user) {
+        return <div>
+            <p>Pas d'utilisateur connu.</p>
+        </div>
     }
     return (
         <form ref={formeRef} onSubmit={(e) => handleSubmite(e)}>

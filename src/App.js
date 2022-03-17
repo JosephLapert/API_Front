@@ -1,11 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
 import NotFound from "./pages/NotFound";
-import ListUsers from "./pages/ListTodo";
 import Home from "./pages/Home";
 import Formulaire from "./components/Formulaire";
 import InsertComment from "./components/AjoutComment";
 import SeanceCoach from "./components/SeanceCoach";
 import UpdateUtilisateur from "./components/UpdateUtilisateur";
+
+import { useAuth } from './contexts/AuthContext';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Link to="/form">Inscription</Link>
         <Link to="/seance">Date de séance</Link>
         <Link to="/update">Modification de profil</Link>
+        <Link to="/comment">insert commentaire</Link>
       </nav>
         <Routes>
           <Route path="*" element={<NotFound />} />
