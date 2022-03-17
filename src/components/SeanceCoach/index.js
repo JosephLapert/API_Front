@@ -17,6 +17,7 @@ const SeanceCoach = (id) => {
         return null;
     }
 
+    
     return (
 
         <div>
