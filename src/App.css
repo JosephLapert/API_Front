@@ -13,6 +13,14 @@ a:hover{
     text-decoration:underline
 }
 
+a:visited{
+    color:black
+}
+
+a:active{
+    color:cornflowerblue
+}
+
 nav{
     display : flex;
 
@@ -46,7 +54,7 @@ nav > #link_css{
     
     text-align: center;
     
-    color: #000000;
+    /* color: #000000; */
 }
 
 #home_css{
@@ -156,7 +164,7 @@ nav > #link_css{
     width: 826px;
     height: 486px;
     left: 0px;
-    top: 269px;
+    top: 220px;
 
     font-family: Mansalva;
 
@@ -225,4 +233,17 @@ nav > #link_css{
     box-sizing: border-box;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+}
+
+#footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.671);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    font-family: Mansalva;
 }
