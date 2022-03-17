@@ -6,6 +6,7 @@ import NameForm from "./components/Formulaire";
 import SeanceCoach from "./components/SeanceCoach";
 import InsertComment from "./components/AjoutComment";
 import AjoutComment from "./components/AjoutComment";
+import Footer from "./components/Footer";
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Link id='link_css' to="/users">Users</Link>
         <Link id='link_css' to="/form">Formulaire</Link>
         <Link id='link_css' to="/seance">Date des séances</Link>
+        <Link id="link_css" to="/" >Connexion</Link>
       </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,6 +32,7 @@ function App() {
           <Route path="/comment" element={<AjoutComment/>} />
           
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
