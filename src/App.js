@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import ListUsers from "./pages/ListTodo";
+import ListUsers from "./pages/ListUsers";
 import NameForm from "./components/Formulaire";
 import SeanceCoach from "./components/SeanceCoach";
 import InsertComment from "./components/AjoutComment";
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/users" element={<ListUsers />} />
+          <Route path="/users" element={<ListUsers one="babla" tableau={[1,2,3]} />} />
           <Route path="/form" element={<NameForm />} />
           <Route path="/seance" element={<SeanceCoach/>} />
           <Route path="/comments" element={<InsertComment />} />
