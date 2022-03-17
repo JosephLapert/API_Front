@@ -1,38 +1,45 @@
-import axios from 'axios';
+import axios from '../../config/axios';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
+import { useState } from 'react'
 
 const Home = () => {
+    const { login } = useAuth();
+    const [error, setError] = useState();
+    // const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const form ={};
         const inputs = e.target.querySelectorAll('.form-input');
+
+        const form ={};
         Array.from(inputs).forEach(input => {
             form[input.name] = input.value
         })
         try {
-            await axios.post('http://localhost:8000/api/auth/', form)
-            
+            // const { data } = await axios.post('/auth', form)    // permet de d'accéder à ce back = sécurité
+            await login(form)
         } catch (error) {
-            console.log(error);
+            setError(error.message)
         }
     }
 
+
     return (
         <div>
-            <h3>
-                Bienvenue sur la page d'accueil de Maison des Ligues.        
-            </h3>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <label>
-                    Email:
-                    <input className="form-input" type="text" name="email" />
-                    Password:
-                    <input className="form-input" type="password" name="psswd" />
-                </label> 
-                    <input type="submit" value="submit" />
-            </form>
-        </div>
-    );
-};
+            <h1>Login</h1>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor='email'>Email</label>
+                <input type='text' name='email'className='form-input' />
+                <label htmlFor='login'>Password</label>
+                <input type='password' name='psswd' className='form-input' />
 
-export default Home;    
+                <input type={"submit"}/>
+            </form>
+            { error && <p>{error}</p> }
+        </div>
+    )
+    
+}
+
+export default Home;
