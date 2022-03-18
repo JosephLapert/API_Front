@@ -1,12 +1,11 @@
-import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 
 const ListUsers = () => {
 
-    const [todos, setTodos] = React.useState([]);
+    const [todos, setTodos] = useState([]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         axios.get('http://localhost:8000/api/test')
             .then((response) => {
             setTodos(response.data.success);

@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import axios from '../../config/axios'
 
 
 const SeanceCoach = (id) => {
@@ -11,13 +11,11 @@ const SeanceCoach = (id) => {
             .then((response) => {
             setSeances(response.data.success[0])
         })
-    }, []);
+    }, [id]);
 
     if (seances.length === 0) { 
         return null;
     }
-
-    
     return (
 
         <div>
