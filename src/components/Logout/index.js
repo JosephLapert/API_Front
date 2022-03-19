@@ -15,7 +15,6 @@ const Logout = () => {
             setError(error.message)
         }
     };
-
     return (
        <div>
            <button onClick={() => handleLogout()}>Se déconnecter</button>

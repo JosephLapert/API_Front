@@ -35,7 +35,7 @@ const AuthContextProvider = ({children}) => {
         try {
            const result =  await axios.post('/auth', form)
             setUser(result.data.success)
-            navigate('/update')            
+            navigate('/seances')            
         } catch (error) {
             console.log(error);
             navigate('/')

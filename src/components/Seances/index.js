@@ -1,9 +1,6 @@
 import axios from "../../config/axios";
 import { useEffect, useState } from "react";
 
-
-
-
 const Seances = () => {
 
     const [seances, setSeances] = useState([]);
@@ -18,11 +15,17 @@ const Seances = () => {
         return null;
     }
 
-    return ( seances.map((seance, index) =>
-        <div key={`Seances${index}`}>
-            { seance.date_seance.substr(0, 10) }
+    return (
+        <div>
+            <ul>
+                { seances.map((seance, index) => (
+                    <li key={`Seances${index}`}>
+                        { seance.date_seance.substr(0,10) }
+                    </li>
+                )) }
+            </ul>
         </div>
-    ))
+    )
 };
  
 export default Seances;

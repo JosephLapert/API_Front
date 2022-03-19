@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import axios from 'axios';
+import axios from '../../config/axios';
 
 const NameForm = () => {
     
@@ -13,7 +13,7 @@ const NameForm = () => {
             form[input.name] = input.value
         })
         try {
-            await axios.post('http://localhost:8000/api/users/', form)      // requete post qui permet d'ajouter l'user dans la DB
+            await axios.post('/users/', form)      // requete post qui permet d'ajouter l'user dans la DB
             
             setMessage('Félicitation, Vous êtes inscrit !!')                // utilisation du useState pour le comportement des champs (réussite ou non)
             setTimeout(() => {                                              // set un timeout pour UX/UI 
