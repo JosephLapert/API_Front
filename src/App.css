@@ -247,3 +247,31 @@ nav > #link_css{
 
     font-family: Mansalva;
 }
+
+#Navbar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    Top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    font-family: Mansalva;
+}
+
+div > #button_navbar_css{
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    position:relative;
+    left:80vw
+
+    
+}
