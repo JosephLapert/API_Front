@@ -7,6 +7,7 @@ import SeanceCoach from "./components/SeanceCoach";
 import InsertComment from "./components/AjoutComment";
 import AjoutComment from "./components/AjoutComment";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+      <Navbar/>  
       <nav>
         <Link id='link_css' to="/">Home</Link>
         <Link id='link_css' to="/users">Users</Link>
