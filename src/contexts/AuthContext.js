@@ -72,7 +72,8 @@ const AuthContextProvider = ({children}) => {
         user,
         setUser,
         login,
-        checkLoginStatus
+        checkLoginStatus,
+        logout
         
     }
 
