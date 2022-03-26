@@ -1,23 +1,19 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import axios from '../../config/axios'
 
 
-const SeanceCoach = (id) => {
+const SeanceCoach = () => {
 
     const [seances, setSeances] = useState([]);
 
-    useEffect(() => {
-        axios.get(`/seances/${ id }`)
-            .then((response) => {
-            setSeances(response.data.success[0])
-        })
-    }, []);
+    useEffect( async () => {
+        const result = await axios.get('/seances/1')
+        setSeances(result.data.success[0])
+    },[])
 
     if (seances.length === 0) { 
         return null;
     }
-
-    
     return (
 
         <div>
@@ -28,11 +24,12 @@ const SeanceCoach = (id) => {
                     </li>
                 )) }
             </ul>
-            {/* <button>S'inscrire</button>  A coder quand on aura le cours
-            sur les sessions */}
         </div>
         
     )
 };
 
 export default SeanceCoach;
+
+{/* <button>S'inscrire</button>  A coder quand on aura le cours
+            sur les sessions */}

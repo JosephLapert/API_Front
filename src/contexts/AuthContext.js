@@ -13,9 +13,9 @@ const AuthContextProvider = ({children}) => {
 
     const logout = async () => {
         try {
-            await axios.get('http://localhost:8000/api/auth/logout');
+            await axios.get('/auth/logout');
             setUser()
-            navigate('/login')
+            navigate('/')
         } catch (error) {
             console.log(error.message);
         }
@@ -25,34 +25,27 @@ const AuthContextProvider = ({children}) => {
         try {
             const { data } = await axios.get('/auth/')
             setUser(data.success)
-            navigate('/seance')
+            navigate('/update')
         } catch (error) {
             navigate('/');
         }
     }
 
     const login = async (form) => {
-        
         try {
-
            const result =  await axios.post('/auth', form)
-            console.log(result.data.success);
             setUser(result.data.success)
-            // navigate('/update')            
+            navigate('/seances')            
         } catch (error) {
             console.log(error);
+            navigate('/')
         }
-    } 
+    }
     const getUserData = async (id) => {
          try {
              const { data } = await axios.get(`/users/${ id }`)
-
-             console.log(data.success);
-             setUser(data.success[0][0])
-             
-            //  navigate('/home');
+             setUser(data.success[0][0])             
          } catch (error) {
-            // navigate('/');
             console.log(error.message);
          }
     }
@@ -62,9 +55,7 @@ const AuthContextProvider = ({children}) => {
 
     useEffect(() => {
         if( user?.id_utilisateur ) {            //  '?' Avoid error 'Cannot read properties of undefined (id)'
-            console.log(user.id_utilisateur);
             getUserData(user.id_utilisateur);
-            console.log(user.id_utilisateur);
         }
     },[user])
 

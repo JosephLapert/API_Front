@@ -1,16 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../contexts/AuthContext';
 
-
-
 const UpdateUtilisateur = () => {
-
-
 
     const { user } = useAuth();
 
-    const handleSubmite = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const form = {};
         const inputs = formeRef.current.querySelectorAll('input');
@@ -22,12 +18,9 @@ const UpdateUtilisateur = () => {
     
     useEffect(() => {
     }, [])
-        
     const formeRef = useRef();
-
     const profileDelete = async (id) => {
         await axios.delete(`/users/${ id }`)
-        
     }
     if (!user) {
         return <div>
@@ -35,7 +28,7 @@ const UpdateUtilisateur = () => {
         </div>
     }
     return (
-        <form ref={formeRef} onSubmit={(e) => handleSubmite(e)}>
+        <form ref={formeRef} onSubmit={(e) => handleSubmit(e)}>
             <label>
                 Nom: 
                 <input type="text" name="nom" value={user.nom}/> <br />
@@ -61,7 +54,7 @@ const UpdateUtilisateur = () => {
                 <input type="password" name="psswd" value={user.psswd}/> <br />
             </label>
                 <input type="submit" value="Submit" />
-                <button onClick={ () =>  profileDelete(user.id_utilisateur) }>Supprimer</button>    
+                <button onClick={ () =>  profileDelete(user.id_utilisateur) }>Supprimer</button>
         </form>
     );
 };
