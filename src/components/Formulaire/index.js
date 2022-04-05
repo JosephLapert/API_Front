@@ -26,6 +26,8 @@ const NameForm = () => {
         }
     }
     const formRef = useRef();                                               // déclaration d'un ref pour les inputs utilisateur.
+
+    
     return (
         <div>
             <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>

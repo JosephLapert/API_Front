@@ -6,7 +6,7 @@ const SeanceCoach = () => {
 
     const [seances, setSeances] = useState([]);
 
-    useEffect( async () => {
+    useEffect( async () => { 
         const result = await axios.get('/seances/1')
         setSeances(result.data.success[0])
     },[])
@@ -30,6 +30,3 @@ const SeanceCoach = () => {
 };
 
 export default SeanceCoach;
-
-{/* <button>S'inscrire</button>  A coder quand on aura le cours
-            sur les sessions */}
