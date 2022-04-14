@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
-import axios from 'axios';
+import axios from '../../config/axios';
 
 const NameForm = () => {
     
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState('')          // Pour afficher le message de réussite d'inscription
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {                 // fonction qui permet de prendre les données que le user rentre et les assignée aux inputs
         e.preventDefault();
         const form = {};
         const inputs = formRef.current.querySelectorAll('input');
@@ -13,19 +13,21 @@ const NameForm = () => {
             form[input.name] = input.value
         })
         try {
-            await axios.post('http://localhost:8000/api/users/', form)
+            await axios.post('/users/', form)      // requete post qui permet d'ajouter l'user dans la DB
             
-            setMessage('Félicitation, Vous êtes inscrit !!')
-            setTimeout(() => {
+            setMessage('Félicitation, Vous êtes inscrit !!')                // utilisation du useState pour le comportement des champs (réussite ou non)
+            setTimeout(() => {                                              // set un timeout pour UX/UI 
                 setMessage('')
             }, 2000 )
         } catch (error) {
 
-            setMessage('Veuillez remplir tous les champs');
-            console.log(error);
+            setMessage('Veuillez remplir tous les champs');                 
+            console.log(error.message);
         }
     }
-    const formRef = useRef();
+    const formRef = useRef();                                               // déclaration d'un ref pour les inputs utilisateur.
+
+    
     return (
         <div>
             <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>

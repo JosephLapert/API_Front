@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useRef } from 'react';
 import axios from 'axios';
+=======
+import React, { useRef } from 'react';
+import axios from '../../config/axios';
+>>>>>>> joseph
 
 
 const NewComment = () => {
@@ -11,7 +16,7 @@ const NewComment = () => {
         Array.from(inputs).filter( input => input.checked ).forEach(input => {
             form[input.name] = input.value  
         })
-        await axios.post('http://localhost:8000/api/comment/', form)
+        await axios.post('/comment/', form)
     }
     const formRef = useRef();
     return (

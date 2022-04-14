@@ -1,39 +1,38 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import axios from 'axios';
+import { useAuth } from '../../contexts/AuthContext';
 
 const UpdateUtilisateur = () => {
 
-    const handleSubmite = async (e) => {
+    const { user } = useAuth();
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const form = {};
         const inputs = formeRef.current.querySelectorAll('input');
         Array.from(inputs).foreach(input => {
             form[input.name] = input.value
         })
-        await axios.post('http://localhost:8000/api/users/', form)
-    }
-    
-    const HandleId = async (id) => {
-        
-        const result = await axios.get(`http://localhost:8000/api/users/${ id }`)
-        setUser(result.data.success[0][0]);
-        
+        await axios.post('/users/', form)
     }
     
     useEffect(() => {
+<<<<<<< HEAD
         HandleId(1)
+=======
+>>>>>>> joseph
     }, [])
-    
-    const [user, setUser] = useState({});
-    
     const formeRef = useRef();
-
     const profileDelete = async (id) => {
-        await axios.delete(`http://localhost:8000/api/users/${ id }`)
-        
+        await axios.delete(`/users/${ id }`)
+    }
+    if (!user) {
+        return <div>
+            <p>Pas d'utilisateur connu.</p>
+        </div>
     }
     return (
-        <form ref={formeRef} onSubmit={(e) => handleSubmite(e)}>
+        <form ref={formeRef} onSubmit={(e) => handleSubmit(e)}>
             <label>
                 Nom: 
                 <input type="text" name="nom" value={user.nom}/> <br />
@@ -59,7 +58,7 @@ const UpdateUtilisateur = () => {
                 <input type="password" name="psswd" value={user.psswd}/> <br />
             </label>
                 <input type="submit" value="Submit" />
-                <button onClick={ () =>  profileDelete(user.id_utilisateur) }>Supprimer</button>    
+                <button onClick={ () =>  profileDelete(user.id_utilisateur) }>Supprimer</button>
         </form>
     );
 };
