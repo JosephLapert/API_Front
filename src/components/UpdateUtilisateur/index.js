@@ -17,10 +17,6 @@ const UpdateUtilisateur = () => {
     }
     
     useEffect(() => {
-<<<<<<< HEAD
-        HandleId(1)
-=======
->>>>>>> joseph
     }, [])
     const formeRef = useRef();
     const profileDelete = async (id) => {
