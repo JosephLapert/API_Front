@@ -35,6 +35,7 @@ const AuthContextProvider = ({children}) => {
         try {
            const result =  await axios.post('/auth', form)
             setUser(result.data.success)
+            console.log(user);
             navigate('/seance')            
         } catch (error) {
             console.log(error);
@@ -51,13 +52,15 @@ const AuthContextProvider = ({children}) => {
     }
     useEffect(() => {
         checkLoginStatus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     useEffect(() => {
         if( user?.id_utilisateur ) {            //  '?' Avoid error 'Cannot read properties of undefined (id)'
             getUserData(user.id_utilisateur);
         }
-    },[user])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const value = {
         user,
