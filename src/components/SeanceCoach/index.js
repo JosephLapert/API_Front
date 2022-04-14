@@ -7,11 +7,14 @@ const SeanceCoach = () => {
 
     const [seances, setSeances] = useState([]);
 
-    useEffect( async () => { 
-        const result = await axios.get('/seances/1')
-        setSeances(result.data.success[0])
+    useEffect(() => { 
+        dataResult()
     },[])
 
+    const dataResult = async () => {
+        const result = await axios.get('/seances/1')
+        setSeances(result.data.success[0])
+    }
     
 
     if (seances.length === 0) { 
@@ -22,12 +25,12 @@ const SeanceCoach = () => {
         <div>
             <ul>
                 { seances.map((seance, index) => (
-                    <li key={`SeanceCoach${index}`}>
-                        { seance.date_seance.substr(0,10) } { seance.nom }  
+                    <li id="date_seance_css" key={`SeanceCoach${index}`}>
+                        { seance.date_seance.substr(0,10) } { seance.nom } <Inscription /> 
                     </li>
                 )) }
                
-            </ul><Inscription />
+            </ul>
         </div>
         
     )

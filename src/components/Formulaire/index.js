@@ -28,33 +28,34 @@ const NameForm = () => {
   const formRef = useRef(); // déclaration d'un ref pour les inputs utilisateur.
 
   return (
-    <div>
-      <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
+    <div id='div_formulaire'>
+      <h3 id='titre_formulaire_css'>Formulaire d'inscription</h3>
+      <form  id='formulaire_css' ref={formRef} onSubmit={(e) => handleSubmit(e)}>
         <label>
           Nom:
-          <input type="text" name="nom" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="nom" /> <br />
           Prenom:
-          <input type="text" name="prenom" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="prenom" /> <br />
           Date de naissance:
-          <input type="date" name="ddn" /> <br />
+          <input id='formulaire_saisie_css' type="date" name="ddn" /> <br />
           Sexe:
-          <input type="text" name="sexe" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="sexe" /> <br />
           Adresse:
-          <input type="text" name="adresse" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="adresse" /> <br />
           Code postal:
-          <input type="text" name="cp" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="cp" /> <br />
           Ville:
-          <input type="text" name="ville" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="ville" /> <br />
           Pays:
-          <input type="text" name="pays" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="pays" /> <br />
           Mobile:
-          <input type="text" name="mobile" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="mobile" /> <br />
           Email:
-          <input type="text" name="email" /> <br />
+          <input id='formulaire_saisie_css' type="text" name="email" /> <br />
           Password:
-          <input type="password" name="psswd" /> <br />
+          <input id='formulaire_saisie_css' type="password" name="psswd" /> <br />
         </label>
-        <input type="submit" value="Submit" />
+        <input id='button_form_css' type="submit" value="Submit" />
         {/* disabled={true}  créer une fonction pour activer le bouton seulement 
                     quand tous les champs sont valide  */}
       </form>

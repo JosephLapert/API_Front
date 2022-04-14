@@ -1,8 +1,10 @@
-const NavBar = () => {
-    return 
-    <nav>
-        <a href="#"><h1>Total Items</h1></a>
-    </nav>
-}
- 
-export default NavBar;
+
+const Navbar = () => {
+  return (
+    <div id="Navbar">
+      <p>Oh une navbar...</p>
+      <button id="button_navbar_css">Déconnexion</button>
+    </div>
+  );
+};
+export default Navbar;

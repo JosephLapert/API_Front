@@ -6,6 +6,8 @@ import SeanceCoach from "./components/SeanceCoach";
 import UpdateUtilisateur from "./components/UpdateUtilisateur";
 import Inscription from "./components/Inscription";
 
+import './App.css'
+
 function App() {
   return (
     <div className="App">

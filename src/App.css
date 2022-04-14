@@ -1,0 +1,277 @@
+body{
+    background-color: #e7e3ff;
+    display: flex;
+    justify-content: center;
+
+}
+
+a:link{
+    text-decoration:none
+}
+
+a:hover{
+    text-decoration:underline
+}
+
+a:visited{
+    color:black
+}
+
+a:active{
+    color:cornflowerblue
+}
+
+nav{
+    display : flex;
+
+    position: absolute;
+    width: 1310px;
+    height: 55px;
+    left: calc(50% - 1310px/2);
+    top: 29px;
+    
+    background: #FFFFFF;
+    opacity: 0.6;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    justify-content: center;
+}
+
+nav > #link_css{
+    flex-grow: 1;
+    text-align: center;
+    
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    /* color: #000000; */
+}
+
+#home_css{
+    display: flex;
+
+    position: absolute;
+    height: 322px;
+    left: 171px;
+    right: 172px;
+    top: 351px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    justify-content: center;
+}
+
+#home_css > h3{
+    position: relative;
+    width: 867px;
+    height: 0px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+#div_list_users{
+    display:flex;
+    flex-direction: column;
+}
+
+#div_list_users > #titre_list_users_css{
+    align-self: center;
+    position: relative;
+    top: 175px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#list_users_css{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 826px;
+    height: 50px;
+    left: 0px;
+    top: 269px;
+
+    font-family: Mansalva;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+
+#div_formulaire{
+    display:flex;
+    flex-direction: column;
+}
+
+#div_formulaire > #titre_formulaire_css{
+    position: relative;
+    align-self: center;
+    top:175px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+
+}
+
+#formulaire_css{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 826px;
+    height: 486px;
+    left: 0px;
+    top: 220px;
+
+    font-family: Mansalva;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#formulaire_css > label{
+    font-size: 25px;
+
+}
+
+#comment_css{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 300px;
+    height: 50px;
+    left: 0px;
+    top: 269px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#titre_date_seance_css{
+    align-self: center;
+    position: relative;
+    top: 175px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#date_seance_css{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 826px;
+    height: 50px;
+    left: 0px;
+    top: 269px;
+
+    font-family: Mansalva;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.671);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    font-family: Mansalva;
+}
+
+#Navbar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    Top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    font-family: Mansalva;
+}
+
+div > #button_navbar_css{
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    position:relative;
+    left:80vw
+
+    
+}
