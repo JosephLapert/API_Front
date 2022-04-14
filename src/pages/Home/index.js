@@ -19,20 +19,19 @@ const Home = () => {
         }
     }
     return (
-        <div>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor='email'>Email</label>
-                <input type='text' name='email'className='form-input' />
+        <div id='home_css'>
+            <h1>Maison des ligues de Lorraine</h1>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor='email'>Email</label>
+                    <input type='text' name='email'className='form-input' />
 
-                <label htmlFor='login'>Password</label>
-                <input type='password' name='psswd' className='form-input' />
-                
-                <br />
-                <input type={"submit"} value='Se connecter'/>
-                <Logout />
-            </form>
-            { error && <p>{error}</p> }
+                    <label htmlFor='login'>Password</label>
+                    <input type='password' name='psswd' className='form-input' />
+                    
+                    <br />
+                    <input type={"submit"} value='Se connecter'/><Logout />
+                </form>
+                { error && <p>{error}</p> }
         </div>
         
     )

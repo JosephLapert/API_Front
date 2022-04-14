@@ -6,7 +6,7 @@ import SeanceCoach from "./components/SeanceCoach";
 import UpdateUtilisateur from "./components/UpdateUtilisateur";
 import Inscription from "./components/Inscription";
 
-
+import './App.css'
 
 function App() {
   return (
@@ -17,14 +17,14 @@ function App() {
         <Link to="/seance">Date de séance</Link>
         <Link to="/update">Modification de profil</Link>
       </nav>
-        <Routes>
-          <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/form" element={<Formulaire />} />
-          <Route path="/seance" element={<SeanceCoach />} />
-          <Route path="/update" element={<UpdateUtilisateur />} />
-          <Route path="/test" element={<Inscription />} />
-        </Routes>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Formulaire />} />
+        <Route path="/seance" element={<SeanceCoach />} />
+        <Route path="/update" element={<UpdateUtilisateur />} />
+        <Route path="/test" element={<Inscription />} />
+      </Routes>
     </div>
   );
 }
