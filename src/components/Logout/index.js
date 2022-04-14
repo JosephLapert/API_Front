@@ -12,6 +12,7 @@ const Logout = () => {
       setMessage("Vous êtes déconnectez");
     } catch (error) {
       setError(error.message);
+      console.log(message);
     }
   };
   return (
