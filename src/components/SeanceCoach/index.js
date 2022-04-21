@@ -1,38 +1,35 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import axios from '../../config/axios'
+import Inscription from '../Inscription';
 
 
 const SeanceCoach = () => {
 
     const [seances, setSeances] = useState([]);
 
-    useEffect(() => {
-        axios.get('http://localhost:8000/api/seance/')
-            .then((response) => {
-            setSeances(response.data.success[0])
-        })
-    }, []);
+    useEffect(() => { 
+        dataResult()
+    },[])
 
-    if (seances.length === 0) {
+    const dataResult = async () => {
+        const result = await axios.get('/seances/1')
+        setSeances(result.data.success[0])
+    }
+    
+
+    if (seances.length === 0) { 
         return null;
     }
-
-    console.log (seances)
-
     return (
         <div>
-            <h3 id="titre_date_seance_css">Liste des séances</h3>
             <ul>
-                { 
-                    seances.map((seance, index) => (
-                    <li id="date_seance_css" key={`selectAllDateTest${index}`}>
-                        { seance.date_seance.substr(0,10) }
+                { seances.map((seance, index) => (
+                    <li id="date_seance_css" key={`SeanceCoach${index}`}>
+                        { seance.date_seance.substr(0,10) } { seance.nom } <Inscription /> 
                     </li>
-                )) 
-                }
+                )) }
+               
             </ul>
-            {/* <button>S'inscrire</button>  A coder quand on aura le cours
-            sur les sessions */}
         </div>
     )
 };
