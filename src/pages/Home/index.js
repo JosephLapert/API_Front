@@ -5,6 +5,7 @@ import Logout from '../../components/Logout';
 const Home = () => {
     const { login } = useAuth();
     const [error, setError] = useState();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const inputs = e.target.querySelectorAll('.form-input');
@@ -24,16 +25,13 @@ const Home = () => {
                 <form onSubmit={handleSubmit}>
                     <label htmlFor='email'>Email</label>
                     <input type='text' name='email'className='form-input' />
-
                     <label htmlFor='login'>Password</label>
-                    <input type='password' name='psswd' className='form-input' />
-                    
+                    <input type='password' name='psswd' className='form-input' />                    
                     <br />
                     <input type={"submit"} value='Se connecter'/><Logout />
                 </form>
                 { error && <p>{error}</p> }
         </div>
-        
     )
 }
 export default Home;

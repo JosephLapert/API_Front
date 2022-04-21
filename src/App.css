@@ -179,6 +179,12 @@ nav > #link_css{
     font-size: 25px;
 
 }
+#css_message {
+    display:flex;
+    z-index: 1;
+    position: relative;
+    align-self: center;
+}
 
 #comment_css{
     display: flex;
