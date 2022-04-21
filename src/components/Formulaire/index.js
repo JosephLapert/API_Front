@@ -14,7 +14,7 @@ const NameForm = () => {
     });
     try {
       await axios.post("/users/", form); // requete post qui permet d'ajouter l'user dans la DB
-
+      formRef.current.reset();
       setMessage("Félicitation, Vous êtes inscrit !!"); // utilisation du useState pour le comportement des champs (réussite ou non)
       setTimeout(() => {
         // set un timeout pour UX/UI
@@ -58,8 +58,8 @@ const NameForm = () => {
         <input id='button_form_css' type="submit" value="Submit" />
         {/* disabled={true}  créer une fonction pour activer le bouton seulement 
                     quand tous les champs sont valide  */}
+      {message && <p id="css_message">{message}</p>}
       </form>
-      {message && <p>{message}</p>}
     </div>
   );
 };
