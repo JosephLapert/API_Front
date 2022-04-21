@@ -5,6 +5,7 @@ import Logout from '../../components/Logout';
 const Home = () => {
     const { login } = useAuth();
     const [error, setError] = useState();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const inputs = e.target.querySelectorAll('.form-input');
