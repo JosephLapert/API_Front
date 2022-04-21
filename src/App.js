@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/users" element={<ListUsers one="babla" tableau={[1,2,3]} />} />
+          <Route path="/users" element={<ListUsers />} />
           <Route path="/form" element={<NameForm />} />
           <Route path="/seance" element={<SeanceCoach/>} />
           <Route path="/comments" element={<InsertComment />} />
