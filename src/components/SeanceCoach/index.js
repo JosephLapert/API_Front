@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from '../../config/axios'
 import Inscription from '../Inscription';
 
-
 const SeanceCoach = () => {
 
     const [seances, setSeances] = useState([]);
@@ -12,21 +11,22 @@ const SeanceCoach = () => {
     },[])
 
     const dataResult = async () => {
-        const result = await axios.get('/seances/1')
-        setSeances(result.data.success[0])
+        try {
+            const result = await axios.get(`/seance/`)
+            console.log(result);
+            setSeances(result.data.success[0])
+        } catch (error) {
+            console.log(error);
+        }
     }
     
-
-    if (seances.length === 0) { 
-        return null;
-    }
     return (
 
         <div>
             <ul>
                 { seances.map((seance, index) => (
                     <li id="date_seance_css" key={`SeanceCoach${index}`}>
-                        { seance.date_seance.substr(0,10) } { seance.nom } <Inscription /> 
+                        { seance.date_seance.substr(0,10) } { seance.nom } <Inscription id_seance_test={seance.id_seance_test}/> 
                     </li>
                 )) }
                
@@ -35,5 +35,4 @@ const SeanceCoach = () => {
         
     )
 };
-
 export default SeanceCoach;
