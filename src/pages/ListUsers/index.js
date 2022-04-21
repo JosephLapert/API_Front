@@ -1,22 +1,21 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-const ListUsers = ({ one, tableau }) => {
+const ListUsers = () => {
 
     const [users, setUsers] = useState([]);
 
     const getUsers = async() => {
         try {
-            const result = await axios.get('http://localhost:8000/api/users/')
+            const result = await axios.get('http://localhost:7000/api/users/')
             setUsers(result.data.success[0])
         } catch (error) {
-            console.log(error)
+            console.error(error)
         }
     }
 
     useEffect(() => {
-        console.log(one);
-        console.log(tableau[2]);
+
         getUsers()
     }, []);
 
@@ -32,7 +31,8 @@ const ListUsers = ({ one, tableau }) => {
             { 
                 users.map(user => {
                     {/* console.log(user) */}
-                    return <div id='list_users_css' key={user.id_utilisateur}>{ user.nom } { user.prenom } { user.ddn }</div> 
+                    return <div id='list_users_css' key={user.id_utilisateur}>{ user.nom } { user.prenom } { user.ddn }
+                    </div> 
                 })
             
             }
