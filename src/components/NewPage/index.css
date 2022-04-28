@@ -1,0 +1,48 @@
+.encadrer-un-contenu{ 
+    border: double;
+    width: 800px;
+    padding: 50px;
+    margin: 200px;
+    
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(166, 207, 231);
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .buttonOui {
+    width: 200px;
+    background-color: #1661bc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .buttonNon {
+    width: 200px;
+    background-color: #e01515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
