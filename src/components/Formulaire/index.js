@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 import axios from "../../config/axios";
 
 const NameForm = () => {
-  const [message, setMessage] = useState(""); // Pour afficher le message de réussite d'inscription
+  const [message, setMessage] = useState("");         // Pour afficher le message de réussite d'inscription
 
-  const handleSubmit = async (e) => {
-    // fonction qui permet de prendre les données que le user rentre et les assignée aux inputs
+  const handleSubmit = async (e) => {                 // fonction qui permet de prendre les données que le user rentre et les assignée aux inputs
+    
     e.preventDefault();
     const form = {};
     const inputs = formRef.current.querySelectorAll("input");
@@ -13,9 +13,9 @@ const NameForm = () => {
       form[input.name] = input.value;
     });
     try {
-      await axios.post("/users/", form); // requete post qui permet d'ajouter l'user dans la DB
+      await axios.post("/users/", form);                  // requete post qui permet d'ajouter l'user dans la DB
       formRef.current.reset();
-      setMessage("Félicitation, Vous êtes inscrit !!"); // utilisation du useState pour le comportement des champs (réussite ou non)
+      setMessage("Félicitation, Vous êtes inscrit !!");   // utilisation du useState pour le comportement des champs (réussite ou non)
       setTimeout(() => {
         // set un timeout pour UX/UI
         setMessage("");
@@ -57,7 +57,7 @@ const NameForm = () => {
         </label>
         <input id='button_form_css' type="submit" value="Submit" />
         {/* disabled={true}  créer une fonction pour activer le bouton seulement 
-                    quand tous les champs sont valide  */}
+                    quand tous les champs sont valide v2 */}
       {message && <p id="css_message">{message}</p>}
       </form>
     </div>
