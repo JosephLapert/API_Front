@@ -12,20 +12,18 @@ const SeanceCoach = () => {
     },[])
 
     const dataResult = async () => {
-        const result = await axios.get('/seances/1')
+        const result = await axios.get('/seance/')
+        console.log(result);
         setSeances(result.data.success[0])
     }
     
 
-    if (seances.length === 0) { 
-        return null;
-    }
-    return (
+        return (
         <div>
             <ul>
                 { seances.map((seance, index) => (
                     <li id="date_seance_css" key={`SeanceCoach${index}`}>
-                        { seance.date_seance.substr(0,10) } { seance.nom } <Inscription /> 
+                        { seance.date_seance.substr(0,10) } { seance.nom } <Inscription id_seance_test={seance.id_seance_test}/> 
                     </li>
                 )) }
                

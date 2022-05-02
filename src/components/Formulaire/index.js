@@ -14,7 +14,7 @@ const NameForm = () => {
     });
     try {
       await axios.post("/users/", form); // requete post qui permet d'ajouter l'user dans la DB
-
+      formRef.current.reset();
       setMessage("Félicitation, Vous êtes inscrit !!"); // utilisation du useState pour le comportement des champs (réussite ou non)
       setTimeout(() => {
         // set un timeout pour UX/UI
