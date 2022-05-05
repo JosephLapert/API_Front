@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/form">Inscription</Link>
-        <Link to="/seance">Date de séance</Link>
-        <Link to="/update">Modification de profil</Link>
+        <Link id="link_css" to="/">Home</Link>
+        <Link id="link_css" to="/form">Inscription</Link>
+        <Link id="link_css" to="/seance">Date de séance</Link>
+        <Link id="link_css" to="/update">Modification de profil</Link>
       </nav>
       <Routes>
         <Route path="*" element={<NotFound />} />

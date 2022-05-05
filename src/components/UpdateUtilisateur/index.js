@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../../contexts/AuthContext";
 
+import '../../App.css'
+
 const UpdateUtilisateur = () => {
   const { user } = useAuth();
 
@@ -28,7 +30,9 @@ const UpdateUtilisateur = () => {
     );
   }
   return (
-    <form ref={formeRef} onSubmit={(e) => handleSubmit(e)}>
+    <div id="div_formulaire">
+    <h3 id="titre_formulaire_css">Modification de profil</h3>
+    <form id="formulaire_css"ref={formeRef} onSubmit={(e) => handleSubmit(e)}>
       <label>
         Nom:
         <input type="text" name="nom" value={user.nom} /> <br />
@@ -58,6 +62,7 @@ const UpdateUtilisateur = () => {
         Supprimer
       </button>
     </form>
+    </div>
   );
 };
 export default UpdateUtilisateur;

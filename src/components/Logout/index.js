@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 
+import '../../App.css'
+
 const Logout = () => {
   const { logout } = useAuth();
   const [error, setError] = useState();
@@ -17,7 +19,7 @@ const Logout = () => {
   };
   return (
     <div>
-      <button onClick={() => handleLogout()}>Se déconnecter</button>
+      <button id="logout_button" onClick={() => handleLogout()}>Se déconnecter</button>
       {error && <p>{error}</p>}
     </div>
   );

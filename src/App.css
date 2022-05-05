@@ -1,6 +1,7 @@
 body{
-    background-color: #e7e3ff;
+    background-color: #fec816;
     display: flex;
+    font-family: Mansalva;
     justify-content: center;
 
 }
@@ -30,8 +31,8 @@ nav{
     left: calc(50% - 1310px/2);
     top: 29px;
     
-    background: #FFFFFF;
-    opacity: 0.6;
+    background: #ffffff;
+    opacity: 1;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
@@ -71,21 +72,22 @@ nav > #link_css{
     box-sizing: border-box;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-#home_css > h3{
+#home_css > h2{
     position: relative;
     width: 867px;
     height: 0px;
     left: 0px;
-    top: 0px;
+    top: -75px;
 
     font-family: Mansalva;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 50px;
     line-height: 70px;
     text-align: center;
 
@@ -96,6 +98,43 @@ nav > #link_css{
 #div_list_users{
     display:flex;
     flex-direction: column;
+}
+
+#home_css > #form_connect{
+    display: flex;
+
+    position: relative;
+    top:50px;
+}
+
+#email_label{
+    position: relative;
+
+    right: 15px;
+}
+
+#email_field{
+    position: relative;
+
+    right: 10px;
+}
+
+#psswd_label{
+    position: relative;
+
+    right: 5px;
+}
+
+#connect_button{
+    position: relative;
+
+    left: 20px;
+}
+
+#logout_button{
+    position: relative;
+
+    left: 30px;
 }
 
 #div_list_users > #titre_list_users_css{
