@@ -1,0 +1,42 @@
+nav{
+    display : flex;
+
+    position: absolute;
+    width: 1310px;
+    height: 55px;
+    left: calc(50% - 1310px/2);
+    top: 29px;
+    
+    background: #ffffff;
+    opacity: 1;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    justify-content: center;
+}
+
+nav > #link_css{
+    flex-grow: 1;
+    text-align: center;
+    
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    /* color: #000000; */
+}
+
+button{
+    position: relative;
+
+    left: -15px;
+    top: 15px;
+}

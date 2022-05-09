@@ -7,7 +7,7 @@ import UpdateUtilisateur from "./components/UpdateUtilisateur";
 import Inscription from "./components/Inscription";
 import Logout from './components/Logout';
 
-import './App.css'
+import './components/Logout/logout.css'
 
 function App() {
   return (
