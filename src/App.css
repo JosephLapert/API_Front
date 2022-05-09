@@ -230,12 +230,6 @@ nav > #link_css{
     border-radius: 15px;
 }
 
-#inscription_seance{
-    position: relative;
-
-    left: 10px;
-}
-
 #div_modification{
     display: flex;
     flex-direction: row;
