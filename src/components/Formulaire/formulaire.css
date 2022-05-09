@@ -51,6 +51,10 @@
     left: 5px;
 }
 
+#input_button {
+    font-family: Mansalva;
+}
+
 #p_formulaire {
     display:flex;
     z-index: 1;

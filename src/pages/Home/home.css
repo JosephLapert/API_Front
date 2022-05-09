@@ -63,5 +63,7 @@
 #connect_button{
     position: relative;
 
+    font-family: Mansalva;
+
     left: 20px;
 }
