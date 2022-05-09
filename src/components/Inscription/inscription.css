@@ -1,5 +1,6 @@
-button {
+#button_inscription {
     position: relative;
 
-    left: 10px;
+    left: 30px;
+    top: -1px;
 }

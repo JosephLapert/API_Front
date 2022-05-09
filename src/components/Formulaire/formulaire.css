@@ -1,9 +1,9 @@
-div {
+#div_formulaire {
     display:flex;
     flex-direction: column;
 }
 
-div > h3 {
+#div_formulaire > #h3_formulaire {
     position: relative;
     align-self: center;
     top:175px;
@@ -17,7 +17,7 @@ div > h3 {
 
 }
 
-form {
+#form_formulaire {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,20 +38,20 @@ form {
     border-radius: 15px;
 }
 
-form > label {
+#form_formulaire > #label_formulaire {
     font-size: 25px;
 
     text-align: end;
 
 }
 
-input {
+#input_formulaire {
     position: relative;
 
     left: 5px;
 }
 
-p {
+#p_formulaire {
     display:flex;
     z-index: 1;
     position: relative;

@@ -34,7 +34,7 @@ nav > #link_css{
     /* color: #000000; */
 }
 
-button{
+#button_logout{
     position: relative;
 
     left: -15px;

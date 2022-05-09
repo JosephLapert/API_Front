@@ -27,7 +27,7 @@ const Inscription = ({id_seance_test}) => {
 
   return (
     <div>
-      <button onClick={handleClick}>Inscription</button>
+      <button id="button_inscription" onClick={handleClick}>Inscription</button>
       {message && <p>{message}</p>}
     </div>
   );
