@@ -17,6 +17,7 @@ function App() {
         <Link id="link_css" to="/form">Inscription</Link>
         <Link id="link_css" to="/seance">Date de séance</Link>
         <Link id="link_css" to="/update">Modification de profil</Link>
+        <Logout />
       </nav>
       <Routes>
         <Route path="*" element={<NotFound />} />

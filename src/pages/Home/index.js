@@ -1,6 +1,6 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
-
+import Logout from '../../components/Logout/index'
 import '../../App.css'
 
 const Home = () => {
