@@ -1,6 +1,5 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
-import Logout from '../../components/Logout';
 
 const Home = () => {
     const { login } = useAuth();
@@ -28,7 +27,7 @@ const Home = () => {
                     <label htmlFor='login'>Password</label>
                     <input type='password' name='psswd' className='form-input' />                    
                     <br />
-                    <input type={"submit"} value='Se connecter'/><Logout />
+                    <input type={"submit"} value='Se connecter'/>
                 </form>
                 { error && <p>{error}</p> }
         </div>

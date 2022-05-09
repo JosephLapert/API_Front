@@ -7,6 +7,7 @@ import UpdateUtilisateur from "./components/UpdateUtilisateur";
 import Inscription from "./components/Inscription";
 
 import './App.css'
+import Logout from "./components/Logout";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Link to="/form">Inscription</Link>
         <Link to="/seance">Date de séance</Link>
         <Link to="/update">Modification de profil</Link>
+        <Logout />
       </nav>
       <Routes>
         <Route path="*" element={<NotFound />} />
