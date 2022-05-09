@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import axios from "../../config/axios";
 
+import './formulaire.css'
+
 const NameForm = () => {
   const [message, setMessage] = useState("");         // Pour afficher le message de réussite d'inscription
 
@@ -28,37 +30,37 @@ const NameForm = () => {
   const formRef = useRef(); // déclaration d'un ref pour les inputs utilisateur.
 
   return (
-    <div id='div_formulaire'>
-      <h3 id='titre_formulaire_css'>Formulaire d'inscription</h3>
-      <form  id='formulaire_css' ref={formRef} onSubmit={(e) => handleSubmit(e)}>
+    <div>
+      <h3>Formulaire d'inscription</h3>
+      <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
         <label>
           Nom:
-          <input id='formulaire_saisie_css' type="text" name="nom" /> <br />
+          <input type="text" name="nom" /> <br />
           Prenom:
-          <input id='formulaire_saisie_css' type="text" name="prenom" /> <br />
+          <input type="text" name="prenom" /> <br />
           Date de naissance:
-          <input id='formulaire_saisie_css' type="date" name="ddn" /> <br />
+          <input type="date" name="ddn" /> <br />
           Sexe:
-          <input id='formulaire_saisie_css' type="text" name="sexe" /> <br />
+          <input type="text" name="sexe" /> <br />
           Adresse:
-          <input id='formulaire_saisie_css' type="text" name="adresse" /> <br />
+          <input type="text" name="adresse" /> <br />
           Code postal:
-          <input id='formulaire_saisie_css' type="text" name="cp" /> <br />
+          <input type="text" name="cp" /> <br />
           Ville:
-          <input id='formulaire_saisie_css' type="text" name="ville" /> <br />
+          <input type="text" name="ville" /> <br />
           Pays:
-          <input id='formulaire_saisie_css' type="text" name="pays" /> <br />
+          <input type="text" name="pays" /> <br />
           Mobile:
-          <input id='formulaire_saisie_css' type="text" name="mobile" /> <br />
+          <input type="text" name="mobile" /> <br />
           Email:
-          <input id='formulaire_saisie_css' type="text" name="email" /> <br />
+          <input type="text" name="email" /> <br />
           Password:
-          <input id='formulaire_saisie_css' type="password" name="psswd" /> <br />
+          <input type="password" name="psswd" /> <br />
         </label>
-        <input id='button_form_css' type="submit" value="Submit" />
+        <input type="submit" value="Submit" />
         {/* disabled={true}  créer une fonction pour activer le bouton seulement 
                     quand tous les champs sont valide v2 */}
-      {message && <p id="css_message">{message}</p>}
+      {message && <p>{message}</p>}
       </form>
     </div>
   );
