@@ -35,27 +35,27 @@ const UpdateUtilisateur = () => {
     <form id="formulaire_css"ref={formeRef} onSubmit={(e) => handleSubmit(e)}>
       <label>
         Nom:
-        <input type="text" name="nom" value={user.nom} /> <br />
+        <input id="modification_saisie_css" type="text" name="nom" value={user.nom} /> <br />
         Prenom:
-        <input type="text" name="prenom" value={user.prenom} /> <br />
+        <input id="modification_saisie_css" type="text" name="prenom" value={user.prenom} /> <br />
         Date de naissance:
-        <input type="date" name="ddn" value={user.ddn} /> <br />
+        <input id="modification_saisie_css" type="date" name="ddn" value={user.ddn} /> <br />
         Sexe:
-        <input type="text" name="sexe" value={user.sexe} /> <br />
+        <input id="modification_saisie_css" type="text" name="sexe" value={user.sexe} /> <br />
         Adresse:
-        <input type="text" name="adresse" value={user.adresse} /> <br />
+        <input id="modification_saisie_css" type="text" name="adresse" value={user.adresse} /> <br />
         Code postal:
-        <input type="text" name="cp" value={user.cp} /> <br />
+        <input id="modification_saisie_css" type="text" name="cp" value={user.cp} /> <br />
         Ville:
-        <input type="text" name="ville" value={user.ville} /> <br />
+        <input id="modification_saisie_css" type="text" name="ville" value={user.ville} /> <br />
         Pays:
-        <input type="text" name="pays" value={user.pays} /> <br />
+        <input id="modification_saisie_css" type="text" name="pays" value={user.pays} /> <br />
         Mobile:
-        <input type="text" name="mobile" value={user.mobile} /> <br />
+        <input id="modification_saisie_css" type="text" name="mobile" value={user.mobile} /> <br />
         Email:
-        <input type="text" name="email" value={user.email} /> <br />
+        <input id="modification_saisie_css" type="text" name="email" value={user.email} /> <br />
         Password:
-        <input type="password" name="psswd" value={user.psswd} /> <br />
+        <input id="modification_saisie_css" type="password" name="psswd" value={user.psswd} /> <br />
       </label>
       <input type="submit" value="Submit" />
       <button onClick={() => profileDelete(user.id_utilisateur)}>

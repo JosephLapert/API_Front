@@ -218,6 +218,13 @@ nav > #link_css{
     font-size: 25px;
 
 }
+
+#formulaire_saisie_css{
+    position: relative;
+
+    left: 5px;
+}
+
 #css_message {
     display:flex;
     z-index: 1;
@@ -278,6 +285,18 @@ nav > #link_css{
     box-sizing: border-box;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+}
+
+#inscription_seance{
+    position: relative;
+
+    left: 10px;
+}
+
+#modification_saisie_css{
+    position: relative;
+
+    left: 5px;
 }
 
 #footer{
