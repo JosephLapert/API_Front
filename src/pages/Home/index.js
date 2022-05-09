@@ -1,6 +1,5 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
-import Logout from '../../components/Logout';
 
 import '../../App.css'
 

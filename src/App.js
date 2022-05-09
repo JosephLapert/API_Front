@@ -7,6 +7,7 @@ import UpdateUtilisateur from "./components/UpdateUtilisateur";
 import Inscription from "./components/Inscription";
 
 import './App.css'
+import Logout from "./components/Logout";
 
 function App() {
   return (
