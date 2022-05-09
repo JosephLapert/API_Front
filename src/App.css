@@ -134,7 +134,8 @@ nav > #link_css{
 #logout_button{
     position: relative;
 
-    left: 30px;
+    right: 10px;
+    top: 10px;
 }
 
 #div_list_users > #titre_list_users_css{
@@ -290,6 +291,21 @@ nav > #link_css{
 #inscription_seance{
     position: relative;
 
+    left: 10px;
+}
+
+#div_modification{
+    display: flex;
+    flex-direction: row;
+}
+
+#div_modification > input{
+    position: relative;
+    right: 10px;
+}
+
+#div_modification{
+    position: relative;
     left: 10px;
 }
 

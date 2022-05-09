@@ -1,6 +1,5 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
-import Logout from '../../components/Logout';
 
 import '../../App.css'
 
@@ -31,7 +30,6 @@ const Home = () => {
                     <input type='password' name='psswd' className='form-input' />                    
                     <br />
                     <input id="connect_button" type={"submit"} value='Se connecter'/>
-                    <Logout />
                 </form>
                 { error && <p>{error}</p> }
         </div>

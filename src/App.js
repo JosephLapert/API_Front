@@ -5,6 +5,7 @@ import Formulaire from "./components/Formulaire";
 import SeanceCoach from "./components/SeanceCoach";
 import UpdateUtilisateur from "./components/UpdateUtilisateur";
 import Inscription from "./components/Inscription";
+import Logout from './components/Logout';
 
 import './App.css'
 
@@ -16,6 +17,7 @@ function App() {
         <Link id="link_css" to="/form">Inscription</Link>
         <Link id="link_css" to="/seance">Date de séance</Link>
         <Link id="link_css" to="/update">Modification de profil</Link>
+        <Logout/>
       </nav>
       <Routes>
         <Route path="*" element={<NotFound />} />

@@ -57,10 +57,10 @@ const UpdateUtilisateur = () => {
         Password:
         <input id="modification_saisie_css" type="password" name="psswd" value={user.psswd} /> <br />
       </label>
-      <input type="submit" value="Submit" />
-      <button onClick={() => profileDelete(user.id_utilisateur)}>
-        Supprimer
-      </button>
+      <div id="div_modification">
+        <input type="submit" value="Submit" />
+        <button onClick={() => profileDelete(user.id_utilisateur)}>Supprimer</button>
+      </div>
     </form>
     </div>
   );
