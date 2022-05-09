@@ -167,26 +167,7 @@ a:active{
 }
 
 
-#div_modification{
-    display: flex;
-    flex-direction: row;
-}
 
-#div_modification > input{
-    position: relative;
-    right: 10px;
-}
-
-#div_modification{
-    position: relative;
-    left: 10px;
-}
-
-#modification_saisie_css{
-    position: relative;
-
-    left: 5px;
-}
 
 #footer{
     margin-top: 1rem;
@@ -199,6 +180,12 @@ a:active{
     z-index: -1;
 
     font-family: Mansalva;
+}
+
+#modification_saisie_css{
+    position: relative;
+
+    left: 5px;
 }
 
 #Navbar{
