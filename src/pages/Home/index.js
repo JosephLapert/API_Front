@@ -33,7 +33,10 @@ const Home = () => {
                     <br />
                     <input id="connect_button" type={"submit"} value='Se connecter'/>
                 </form>
-                <Link id="link_css" to="/form">Inscription</Link>
+                <p>
+                    Vous n'avez pas de compte ? &rarr; <Link id="link_css" to="/form">Inscription</Link>
+                </p>
+                
 
                 { error && <p>{error}</p> }
         </div>
