@@ -3,7 +3,11 @@ body{
     display: flex;
     font-family: Mansalva;
     justify-content: center;
-
+    background-image: url("./images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: right;
+    background-position-y: 10px;
 }
 
 a:link{

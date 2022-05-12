@@ -19,7 +19,7 @@ const Logout = () => {
   };
   return (
     <div>
-      <button id="button_logout" onClick={() => handleLogout()}>Se déconnecter</button>
+      <button id="button_logout" onClick={() => handleLogout()}>Déconnexion</button>
       {error && <p>{error}</p>}
     </div>
   );

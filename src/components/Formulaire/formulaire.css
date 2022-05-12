@@ -53,6 +53,9 @@
 
 #input_button {
     font-family: Mansalva;
+
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 #p_formulaire {

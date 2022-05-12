@@ -58,8 +58,8 @@ const UpdateUtilisateur = () => {
           <input id="input_updateutilisateur" type="password" name="psswd" value={user.psswd} /> <br />
         </label>
         <div id="div_button_updateutilisateur">
-          <input type="submit" value="Modifier" />
-          <button id="button_updateutilisateur" onClick={() => profileDelete(user.id_utilisateur)}>Supprimer</button>
+          <input id="button_modifier" type="submit" value="Modifier" />
+          <button id="button_supprimer" onClick={() => profileDelete(user.id_utilisateur)}>Supprimer</button>
         </div>
       </form>
     </div>
