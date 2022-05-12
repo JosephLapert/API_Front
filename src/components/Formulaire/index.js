@@ -62,7 +62,7 @@ const NameForm = () => {
         {/* disabled={true}  créer une fonction pour activer le bouton seulement 
                     quand tous les champs sont valide v2 */}
       {message && <p id="p_formulaire">{message}</p>}
-     <p> Revenir à la page de connexion  &rarr;	 <Link id="link_css" to="/">Connexion</Link></p> 
+     <p> Revenir à la page de connexion  &rarr;	 <Link className="inscription__css" to="/">Connexion</Link></p> 
       </form> 
     </div>
   );
