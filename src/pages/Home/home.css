@@ -70,3 +70,13 @@
     border: 1px solid black;
     border-radius: 5px;
 }
+
+#button_home{
+    position: relative;
+    font-family: Mansalva;
+    left: 30px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+

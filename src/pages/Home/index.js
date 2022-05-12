@@ -32,8 +32,8 @@ const Home = () => {
                     <input type='password' name='psswd' className='form-input' />                    
                     <br />
                     <input id="connect_button" type={"submit"} value='Se connecter'/>
+                    <button id="button_home"><Link to="/form">Inscription</Link></button>
                 </form>
-                <Link id="link_css" to="/form">Inscription</Link>
 
                 { error && <p>{error}</p> }
         </div>

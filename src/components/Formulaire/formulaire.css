@@ -58,9 +58,25 @@
     border-radius: 5px;
 }
 
+#button_revenir{
+    position: relative;
+    font-family: Mansalva;
+    left: 10px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 #p_formulaire {
     display:flex;
     z-index: 1;
     position: relative;
     align-self: center;
+}
+
+#div_formulaire_button{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 10px;
 }

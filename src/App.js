@@ -28,7 +28,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Formulaire />} />
-        <Route element={<ProtectedRoute />}>
+          <Route element={<ProtectedRoute />}>
           <Route path="*" element={<NotFound />} />
           <Route path="/seance" element={<SeanceCoach />} />
           <Route path="/update" element={<UpdateUtilisateur />} />

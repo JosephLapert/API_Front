@@ -58,11 +58,13 @@ const NameForm = () => {
           Password:
           <input id="input_formulaire" type="password" name="psswd" /> <br />
         </label>
-        <input id="input_button" type="submit" value="S'inscrire" />
-        {/* disabled={true}  créer une fonction pour activer le bouton seulement 
+        <div id="div_formulaire_button">
+          <input id="input_button" type="submit" value="S'inscrire" />
+          {/* disabled={true}  créer une fonction pour activer le bouton seulement 
                     quand tous les champs sont valide v2 */}
-      {message && <p id="p_formulaire">{message}</p>}
-      <Link id="link_css" to="/">Connexion</Link>
+          {message && <p id="p_formulaire">{message}</p>}
+          <button id="button_revenir"><Link id="link_css" to="/">Revenir</Link></button>
+        </div>
       </form> 
     </div>
   );
