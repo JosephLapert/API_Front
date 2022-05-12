@@ -28,7 +28,7 @@ const NameForm = () => {
       console.log(error.message);
     }
   };
-  const formRef = useRef(); // déclaration d'un ref pour les inputs utilisateur.
+  const formRef = useRef(); // déclaration d'un ref pour les inputs utilisateur 
 
   return (
     <div id="div_formulaire">
