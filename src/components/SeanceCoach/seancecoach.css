@@ -1,0 +1,20 @@
+#li_seancecoach{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 826px;
+    height: 50px;
+    left: 0px;
+    top: 269px;
+
+    font-family: Mansalva;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}

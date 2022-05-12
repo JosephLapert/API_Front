@@ -1,5 +1,7 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
+
+import './home.css'
 import '../../App.css'
 
 const Home = () => {
@@ -21,7 +23,7 @@ const Home = () => {
     }
     return (
         <div id='home_css'>
-            <h2>Bienvenue à la Maison des ligues de Lorraine</h2>
+            <h2 id="h2_home">Bienvenue à la Maison des ligues de Lorraine</h2>
                 <form id="form_connect" onSubmit={handleSubmit}>
                     <label id="email_label" htmlFor='email'>Email</label>
                     <input id="email_field" type='text' name='email'className='form-input' />

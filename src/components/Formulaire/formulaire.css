@@ -1,0 +1,66 @@
+#div_formulaire {
+    display:flex;
+    flex-direction: column;
+}
+
+#div_formulaire > #h3_formulaire {
+    position: relative;
+    align-self: center;
+    top:175px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+
+}
+
+#form_formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 826px;
+    height: 486px;
+    left: 0px;
+    top: 220px;
+
+    font-family: Mansalva;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+#form_formulaire > #label_formulaire {
+    font-size: 25px;
+
+    text-align: end;
+
+}
+
+#input_formulaire {
+    position: relative;
+
+    left: 5px;
+}
+
+#input_button {
+    font-family: Mansalva;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#p_formulaire {
+    display:flex;
+    z-index: 1;
+    position: relative;
+    align-self: center;
+}

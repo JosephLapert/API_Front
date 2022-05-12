@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from '../../config/axios'
 import { useAuth } from '../../contexts/AuthContext';
 
+import './inscription.css'
 
 const Inscription = ({id_seance_test}) => {
   const [message, setMessage] = useState();
@@ -26,7 +27,7 @@ const Inscription = ({id_seance_test}) => {
 
   return (
     <div>
-      <button id="inscription_seance" onClick={handleClick}>Inscription</button>
+      <button id="button_inscription" onClick={handleClick}>Inscription</button>
       {message && <p>{message}</p>}
     </div>
   );

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from '../../config/axios'
 import Inscription from '../Inscription';
 
+import './seancecoach.css'
+
 const SeanceCoach = () => {
 
     const [seances, setSeances] = useState([]);
@@ -24,7 +26,7 @@ const SeanceCoach = () => {
         <div>
             <ul>
                 { seances.map((seance, index) => (
-                    <li id="date_seance_css" key={`SeanceCoach${index}`}>
+                    <li id="li_seancecoach" key={`SeanceCoach${index}`}>
                         { seance.date_seance.substr(0,10) } { seance.nom } <Inscription id_seance_test={seance.id_seance_test}/> 
                     </li>
                 )) }

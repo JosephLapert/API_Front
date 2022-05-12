@@ -1,0 +1,72 @@
+#home_css{
+    display: flex;
+
+    position: absolute;
+    height: 322px;
+    left: 171px;
+    right: 172px;
+    top: 351px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home_css > #h2_home{
+    position: relative;
+    width: 867px;
+    height: 0px;
+    left: 0px;
+    top: -75px;
+
+    font-family: Mansalva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+#home_css > #form_connect{
+    display: flex;
+
+    position: relative;
+    top:50px;
+}
+
+#email_label{
+    position: relative;
+
+    right: 15px;
+}
+
+#email_field{
+    position: relative;
+
+    right: 10px;
+}
+
+#psswd_label{
+    position: relative;
+
+    right: 5px;
+}
+
+#connect_button{
+    position: relative;
+
+    font-family: Mansalva;
+
+    left: 20px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}

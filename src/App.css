@@ -3,7 +3,11 @@ body{
     display: flex;
     font-family: Mansalva;
     justify-content: center;
-
+    background-image: url("./images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: right;
+    background-position-y: 10px;
 }
 
 a:link{
@@ -22,120 +26,14 @@ a:active{
     color:cornflowerblue
 }
 
-nav{
-    display : flex;
 
-    position: absolute;
-    width: 1310px;
-    height: 55px;
-    left: calc(50% - 1310px/2);
-    top: 29px;
-    
-    background: #ffffff;
-    opacity: 1;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-
-    justify-content: center;
-}
-
-nav > #link_css{
-    flex-grow: 1;
-    text-align: center;
-    
-
-    font-family: Mansalva;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 45px;
-    /* identical to box height */
-    
-    text-align: center;
-    
-    /* color: #000000; */
-}
-
-#home_css{
-    display: flex;
-
-    position: absolute;
-    height: 322px;
-    left: 171px;
-    right: 172px;
-    top: 351px;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#home_css > h2{
-    position: relative;
-    width: 867px;
-    height: 0px;
-    left: 0px;
-    top: -75px;
-
-    font-family: Mansalva;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 70px;
-    text-align: center;
-
-    color: #000000;
-
-}
 
 #div_list_users{
     display:flex;
     flex-direction: column;
 }
 
-#home_css > #form_connect{
-    display: flex;
 
-    position: relative;
-    top:50px;
-}
-
-#email_label{
-    position: relative;
-
-    right: 15px;
-}
-
-#email_field{
-    position: relative;
-
-    right: 10px;
-}
-
-#psswd_label{
-    position: relative;
-
-    right: 5px;
-}
-
-#connect_button{
-    position: relative;
-
-    left: 20px;
-}
-
-#logout_button{
-    position: relative;
-
-    left: 30px;
-}
 
 #div_list_users > #titre_list_users_css{
     align-self: center;
@@ -174,64 +72,6 @@ nav > #link_css{
 
 }
 
-#div_formulaire{
-    display:flex;
-    flex-direction: column;
-}
-
-#div_formulaire > #titre_formulaire_css{
-    position: relative;
-    align-self: center;
-    top:175px;
-
-    font-family: Mansalva;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 70px;
-    text-align: center;
-
-}
-
-#formulaire_css{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    width: 826px;
-    height: 486px;
-    left: 0px;
-    top: 220px;
-
-    font-family: Mansalva;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-#formulaire_css > label{
-    font-size: 25px;
-
-}
-
-#formulaire_saisie_css{
-    position: relative;
-
-    left: 5px;
-}
-
-#css_message {
-    display:flex;
-    z-index: 1;
-    position: relative;
-    align-self: center;
-}
-
 #comment_css{
     display: flex;
     flex-direction: row;
@@ -266,38 +106,8 @@ nav > #link_css{
     color: #000000;
 }
 
-#date_seance_css{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 
-    position: relative;
-    width: 826px;
-    height: 50px;
-    left: 0px;
-    top: 269px;
 
-    font-family: Mansalva;
-
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-#inscription_seance{
-    position: relative;
-
-    left: 10px;
-}
-
-#modification_saisie_css{
-    position: relative;
-
-    left: 5px;
-}
 
 #footer{
     margin-top: 1rem;
@@ -310,6 +120,12 @@ nav > #link_css{
     z-index: -1;
 
     font-family: Mansalva;
+}
+
+#modification_saisie_css{
+    position: relative;
+
+    left: 5px;
 }
 
 #Navbar{
