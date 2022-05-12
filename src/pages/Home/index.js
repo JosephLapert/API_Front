@@ -1,5 +1,6 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './home.css'
 import '../../App.css'
@@ -32,6 +33,8 @@ const Home = () => {
                     <br />
                     <input id="connect_button" type={"submit"} value='Se connecter'/>
                 </form>
+                <Link id="link_css" to="/form">Inscription</Link>
+
                 { error && <p>{error}</p> }
         </div>
     )
