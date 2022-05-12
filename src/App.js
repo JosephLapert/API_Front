@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Formulaire from "./components/Formulaire";
 import SeanceCoach from "./components/SeanceCoach";
 import UpdateUtilisateur from "./components/UpdateUtilisateur";
-<<<<<<< HEAD
 import Logout from "./components/Logout";
 
 import { useAuth } from "./contexts/AuthContext";
@@ -15,12 +14,6 @@ const ProtectedRoute = () => {
   const { user } = useAuth();
   return user ? <Outlet /> : <Navigate to="/" />;
 };
-=======
-import Inscription from "./components/Inscription";
-import Logout from './components/Logout';
-
-import './components/Logout/logout.css'
->>>>>>> test_css
 
 function App() {
   const { user } = useAuth();
