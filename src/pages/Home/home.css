@@ -70,3 +70,10 @@
     border: 1px solid black;
     border-radius: 5px;
 }
+.inscription__css {
+   font-size: 15px;
+    
+}
+.placement__inscription {
+    margin-top: 90px;
+}

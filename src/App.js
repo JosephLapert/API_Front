@@ -21,17 +21,15 @@ function App() {
   return (
     <div className="App">
       {user && <nav>
-        <Link id="link_css" to="/">Home</Link>
-        <Link id="link_css" to="/form">Inscription</Link>
         <Link id="link_css" to="/seance">Date de séance</Link>
         <Link id="link_css" to="/update">Modification de profil</Link>
         <Logout/>
       </nav>}
       <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/form" element={<Formulaire />} />
         <Route element={<ProtectedRoute />}>
           <Route path="*" element={<NotFound />} />
-          <Route path="/form" element={<Formulaire />} />
           <Route path="/seance" element={<SeanceCoach />} />
           <Route path="/update" element={<UpdateUtilisateur />} />
         </Route>

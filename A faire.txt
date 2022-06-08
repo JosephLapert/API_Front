@@ -1,7 +1,3 @@
-inscription date séance pour l'utilisateur 
 
-Voir la liste et sincrire & 
-
-Avoir accès à son statut d'inscription.
-
-utilisateur voit son statut test & et le commentaire.
+V2 - Avoir accès à son statut d'inscription.
+V2 - Utilisateur voit son statut test & et le commentaire.

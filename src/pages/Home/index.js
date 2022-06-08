@@ -1,5 +1,6 @@
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './home.css'
 import '../../App.css'
@@ -32,6 +33,11 @@ const Home = () => {
                     <br />
                     <input id="connect_button" type={"submit"} value='Se connecter'/>
                 </form>
+                <p className='placement__inscription'>
+                    Vous n'avez pas de compte ? &rarr; <Link className="inscription__css" to="/form">Inscription</Link>
+                </p>
+                
+
                 { error && <p>{error}</p> }
         </div>
     )

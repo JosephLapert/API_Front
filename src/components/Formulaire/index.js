@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import axios from "../../config/axios";
+import { Link } from "react-router-dom";
 
 import './formulaire.css'
 
@@ -27,7 +28,7 @@ const NameForm = () => {
       console.log(error.message);
     }
   };
-  const formRef = useRef(); // déclaration d'un ref pour les inputs utilisateur.
+  const formRef = useRef(); // déclaration d'un ref pour les inputs utilisateur 
 
   return (
     <div id="div_formulaire">
@@ -61,7 +62,8 @@ const NameForm = () => {
         {/* disabled={true}  créer une fonction pour activer le bouton seulement 
                     quand tous les champs sont valide v2 */}
       {message && <p id="p_formulaire">{message}</p>}
-      </form>
+     <p> Revenir à la page de connexion  &rarr;	 <Link className="inscription__css" to="/">Connexion</Link></p> 
+      </form> 
     </div>
   );
 };
